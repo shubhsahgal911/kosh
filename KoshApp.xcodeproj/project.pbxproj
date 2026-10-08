@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		89EA0F14307724BD00903C8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 89EA0F13307724AC00903C8C /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		89AD811D3074BDF50007872A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -28,6 +32,7 @@
 		89AD811C3074BDF50007872A /* KoshAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoshAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AD81263074BDF50007872A /* KoshAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoshAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AD81393074BEF80007872A /* KoshAppKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = KoshAppKit; sourceTree = "<group>"; };
+		89EA0F13307724AC00903C8C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -89,6 +94,7 @@
 		89AD81063074BDEB0007872A = {
 			isa = PBXGroup;
 			children = (
+				89EA0F13307724AC00903C8C /* README.md */,
 				89AD81393074BEF80007872A /* KoshAppKit */,
 				89AD81113074BDEB0007872A /* KoshApp */,
 				89AD811F3074BDF50007872A /* KoshAppTests */,
@@ -227,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EA0F14307724BD00903C8C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
