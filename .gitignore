@@ -1,0 +1,18 @@
+#  .gitignore
+#  KoshApp
+#  Created by Shubham Sahgal on 08/10/26.
+
+# Xcode userstate and builds
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.xcresult
+
+#Swift Package Manager
+.build/
+.swiftpm/
+SourcePackages/
+
+#macOS
+.DS_Store
