@@ -1,0 +1,73 @@
+{
+  "configurations" : [
+    {
+      "id" : "7D2CA9E4-F55B-4A5C-AD2A-EC293E254E8E",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:KoshApp.xcodeproj",
+      "identifier" : "89AD810E3074BDEB0007872A",
+      "name" : "KoshApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:KoshApp.xcodeproj",
+        "identifier" : "89AD81253074BDF50007872A",
+        "name" : "KoshAppUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:KoshAppKit",
+        "identifier" : "KoshDomainTests",
+        "name" : "KoshDomainTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:KoshApp.xcodeproj",
+        "identifier" : "89AD811B3074BDF50007872A",
+        "name" : "KoshAppTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:KoshAppKit",
+        "identifier" : "KoshDataTests",
+        "name" : "KoshDataTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:KoshAppKit",
+        "identifier" : "ExpensesFeatureTests",
+        "name" : "ExpensesFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:KoshAppKit",
+        "identifier" : "KoshNetworkingTests",
+        "name" : "KoshNetworkingTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:KoshAppKit",
+        "identifier" : "AuthFeatureTests",
+        "name" : "AuthFeatureTests"
+      }
+    }
+  ],
+  "version" : 1
+}

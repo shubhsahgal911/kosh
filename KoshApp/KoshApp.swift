@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
-
+import KoshNetworking
+import GoogleMapsSupport
 @main
 struct KoshApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().onAppear {
+                print("Almofire Version:\(KoshNetworking.version) | Google Version:\(GoogleMapsSupportModule.sdkVersion)")
+            }
         }
     }
 }
