@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		89EA0F14307724BD00903C8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 89EA0F13307724AC00903C8C /* README.md */; };
+		89EA0F17307912D400903C8C /* AuthFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F16307912D400903C8C /* AuthFeature */; };
+		89EA0F19307912D400903C8C /* DashboardFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F18307912D400903C8C /* DashboardFeature */; };
+		89EA0F1B307912D400903C8C /* ExpensesFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F1A307912D400903C8C /* ExpensesFeature */; };
+		89EA0F1D307912D400903C8C /* GoogleMapsSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F1C307912D400903C8C /* GoogleMapsSupport */; };
+		89EA0F1F307912D400903C8C /* KoshData in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F1E307912D400903C8C /* KoshData */; };
+		89EA0F21307912D400903C8C /* KoshDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F20307912D400903C8C /* KoshDomain */; };
+		89EA0F23307912D400903C8C /* KoshNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F22307912D400903C8C /* KoshNetworking */; };
+		89EA0F25307912D400903C8C /* KoshPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F24307912D400903C8C /* KoshPlatform */; };
+		89EA0F27307912D400903C8C /* KoshUI in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F26307912D400903C8C /* KoshUI */; };
+		89EA0F29307912D400903C8C /* MapFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F28307912D400903C8C /* MapFeature */; };
+		89EA0F2B307912D400903C8C /* OffersFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F2A307912D400903C8C /* OffersFeature */; };
+		89EA0F2D307912D400903C8C /* SettingsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F2C307912D400903C8C /* SettingsFeature */; };
+		89EA0F2F307912D400903C8C /* StatementFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F2E307912D400903C8C /* StatementFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +45,7 @@
 		89AD811C3074BDF50007872A /* KoshAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoshAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AD81263074BDF50007872A /* KoshAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoshAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AD81393074BEF80007872A /* KoshAppKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = KoshAppKit; sourceTree = "<group>"; };
+		89C03177307EF85F00B75F88 /* KoshApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = KoshApp.xctestplan; sourceTree = "<group>"; };
 		89EA0F13307724AC00903C8C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +85,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EA0F2F307912D400903C8C /* StatementFeature in Frameworks */,
+				89EA0F1D307912D400903C8C /* GoogleMapsSupport in Frameworks */,
+				89EA0F1F307912D400903C8C /* KoshData in Frameworks */,
+				89EA0F2B307912D400903C8C /* OffersFeature in Frameworks */,
+				89EA0F1B307912D400903C8C /* ExpensesFeature in Frameworks */,
+				89EA0F2D307912D400903C8C /* SettingsFeature in Frameworks */,
+				89EA0F23307912D400903C8C /* KoshNetworking in Frameworks */,
+				89EA0F29307912D400903C8C /* MapFeature in Frameworks */,
+				89EA0F19307912D400903C8C /* DashboardFeature in Frameworks */,
+				89EA0F17307912D400903C8C /* AuthFeature in Frameworks */,
+				89EA0F25307912D400903C8C /* KoshPlatform in Frameworks */,
+				89EA0F21307912D400903C8C /* KoshDomain in Frameworks */,
+				89EA0F27307912D400903C8C /* KoshUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,11 +121,13 @@
 		89AD81063074BDEB0007872A = {
 			isa = PBXGroup;
 			children = (
+				89C03177307EF85F00B75F88 /* KoshApp.xctestplan */,
 				89EA0F13307724AC00903C8C /* README.md */,
 				89AD81393074BEF80007872A /* KoshAppKit */,
 				89AD81113074BDEB0007872A /* KoshApp */,
 				89AD811F3074BDF50007872A /* KoshAppTests */,
 				89AD81293074BDF50007872A /* KoshAppUITests */,
+				89EA0F15307912D400903C8C /* Frameworks */,
 				89AD81103074BDEB0007872A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +140,13 @@
 				89AD81263074BDF50007872A /* KoshAppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		89EA0F15307912D400903C8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +169,19 @@
 			);
 			name = KoshApp;
 			packageProductDependencies = (
+				89EA0F16307912D400903C8C /* AuthFeature */,
+				89EA0F18307912D400903C8C /* DashboardFeature */,
+				89EA0F1A307912D400903C8C /* ExpensesFeature */,
+				89EA0F1C307912D400903C8C /* GoogleMapsSupport */,
+				89EA0F1E307912D400903C8C /* KoshData */,
+				89EA0F20307912D400903C8C /* KoshDomain */,
+				89EA0F22307912D400903C8C /* KoshNetworking */,
+				89EA0F24307912D400903C8C /* KoshPlatform */,
+				89EA0F26307912D400903C8C /* KoshUI */,
+				89EA0F28307912D400903C8C /* MapFeature */,
+				89EA0F2A307912D400903C8C /* OffersFeature */,
+				89EA0F2C307912D400903C8C /* SettingsFeature */,
+				89EA0F2E307912D400903C8C /* StatementFeature */,
 			);
 			productName = KoshApp;
 			productReference = 89AD810F3074BDEB0007872A /* KoshApp.app */;
@@ -438,6 +487,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = in.co.KoshApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -478,6 +528,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = in.co.KoshApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -618,6 +669,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89EA0F16307912D400903C8C /* AuthFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthFeature;
+		};
+		89EA0F18307912D400903C8C /* DashboardFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DashboardFeature;
+		};
+		89EA0F1A307912D400903C8C /* ExpensesFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ExpensesFeature;
+		};
+		89EA0F1C307912D400903C8C /* GoogleMapsSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GoogleMapsSupport;
+		};
+		89EA0F1E307912D400903C8C /* KoshData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KoshData;
+		};
+		89EA0F20307912D400903C8C /* KoshDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KoshDomain;
+		};
+		89EA0F22307912D400903C8C /* KoshNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KoshNetworking;
+		};
+		89EA0F24307912D400903C8C /* KoshPlatform */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KoshPlatform;
+		};
+		89EA0F26307912D400903C8C /* KoshUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KoshUI;
+		};
+		89EA0F28307912D400903C8C /* MapFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MapFeature;
+		};
+		89EA0F2A307912D400903C8C /* OffersFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OffersFeature;
+		};
+		89EA0F2C307912D400903C8C /* SettingsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SettingsFeature;
+		};
+		89EA0F2E307912D400903C8C /* StatementFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StatementFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89AD81073074BDEB0007872A /* Project object */;
 }
