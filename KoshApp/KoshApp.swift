@@ -10,11 +10,11 @@ import KoshNetworking
 import GoogleMapsSupport
 @main
 struct KoshApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+    
     var body: some Scene {
         WindowGroup {
-            ContentView().onAppear {
-                print("Almofire Version:\(KoshNetworking.version) | Google Version:\(GoogleMapsSupportModule.sdkVersion)")
-            }
+            RootView(container: appDelegate.container, router: appDelegate.container.router)
         }
     }
 }

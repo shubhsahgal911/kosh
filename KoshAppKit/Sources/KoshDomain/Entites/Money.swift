@@ -16,9 +16,8 @@ public struct Money: Hashable, Sendable, Codable  {
         self.currency = currency.uppercased()
     }
     
-    public init(_ amount: Decimal) {
-        self.amount = amount
-        self.currency = "INR"
+    public static func inr(_ amount: Decimal) -> Money {
+        Money(amount: amount, currency: "INR")
     }
     
     public var isPositive: Bool {

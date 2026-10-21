@@ -50,7 +50,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		89E77DC8307629C6003DD131 /* Exceptions for "KoshApp" folder in "KoshApp" target */ = {
+		89C031E53081A49200B75F88 /* Exceptions for "KoshApp" folder in "KoshApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -60,14 +60,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		89AD81113074BDEB0007872A /* KoshApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				89E77DC8307629C6003DD131 /* Exceptions for "KoshApp" folder in "KoshApp" target */,
-			);
-			path = KoshApp;
-			sourceTree = "<group>";
-		};
 		89AD811F3074BDF50007872A /* KoshAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = KoshAppTests;
@@ -76,6 +68,14 @@
 		89AD81293074BDF50007872A /* KoshAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = KoshAppUITests;
+			sourceTree = "<group>";
+		};
+		89C031E03081A49100B75F88 /* KoshApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				89C031E53081A49200B75F88 /* Exceptions for "KoshApp" folder in "KoshApp" target */,
+			);
+			path = KoshApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -124,7 +124,7 @@
 				89C03177307EF85F00B75F88 /* KoshApp.xctestplan */,
 				89EA0F13307724AC00903C8C /* README.md */,
 				89AD81393074BEF80007872A /* KoshAppKit */,
-				89AD81113074BDEB0007872A /* KoshApp */,
+				89C031E03081A49100B75F88 /* KoshApp */,
 				89AD811F3074BDF50007872A /* KoshAppTests */,
 				89AD81293074BDF50007872A /* KoshAppUITests */,
 				89EA0F15307912D400903C8C /* Frameworks */,
@@ -165,7 +165,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				89AD81113074BDEB0007872A /* KoshApp */,
+				89C031E03081A49100B75F88 /* KoshApp */,
 			);
 			name = KoshApp;
 			packageProductDependencies = (
