@@ -11,7 +11,7 @@ import GoogleMapsSupport
 @main
 struct KoshApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
-    
+
     var body: some Scene {
         WindowGroup {
             RootView(container: appDelegate.container, router: appDelegate.container.router)

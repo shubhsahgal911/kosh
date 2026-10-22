@@ -32,8 +32,8 @@ public final class AppRouter: ObservableObject {
     @Published public var expensesPath: [Route] = []
     @Published public var settingsPath: [Route] = []
     @Published var sheet: Sheet?
-    
-    func push(_ route:Route,on tab:AppTab) {
+
+    func push(_ route: Route, on tab: AppTab) {
         selectedTab = tab
         switch tab {
         case .home: homePath.append(route)
@@ -42,7 +42,7 @@ public final class AppRouter: ObservableObject {
         case .atms, .statements: break
         }
     }
-    
+
     func popToRoot(_ tab: AppTab) {
             switch tab {
             case .home: homePath.removeAll()

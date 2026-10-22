@@ -8,5 +8,4 @@
 import Alamofire
 public enum KoshNetworking {
     public static var version: String { AFInfo.version }
-    
 }

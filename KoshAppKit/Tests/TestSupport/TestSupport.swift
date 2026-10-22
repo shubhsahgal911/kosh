@@ -9,5 +9,4 @@ import XCTest
 import KoshDomain
 
 public enum TestSupport {
-    
 }

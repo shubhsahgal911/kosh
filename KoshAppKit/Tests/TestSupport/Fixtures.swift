@@ -15,7 +15,7 @@ public extension Date {
 }
 
 public extension Expense {
-    
+
     static func fixture(
         id: UUID = UUID(),
         merchant: String = "Swiggy",

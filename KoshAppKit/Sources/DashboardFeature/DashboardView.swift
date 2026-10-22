@@ -9,11 +9,11 @@ import SwiftUI
 import KoshDomain
 
 public struct DashboardView: View {
-    
+
     @StateObject private var viewModel: DashboardViewModel
     private let onAddExpense: @MainActor () -> Void
     private let onSelectExpense: @MainActor (Expense.ID) -> Void
-    
+
     public init(
         viewModel: @autoclosure @escaping () -> DashboardViewModel,
         onAddExpense: @autoclosure @escaping @MainActor () -> Void,
@@ -23,7 +23,7 @@ public struct DashboardView: View {
         self.onAddExpense = onAddExpense
         self.onSelectExpense = onSelectExpense
     }
-    
+
     public var body: some View {
         content.navigationTitle("Home").toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -37,7 +37,7 @@ public struct DashboardView: View {
             await viewModel.load()
         }
     }
-    
+
     @ViewBuilder
     private var content: some View {
         switch viewModel.state {
@@ -59,7 +59,7 @@ public struct DashboardView: View {
     }
 }
 
-private struct ExpenseRow : View {
+private struct ExpenseRow: View {
     let expense: Expense
     var body: some View {
         HStack {
