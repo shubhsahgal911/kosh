@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct OffersView: View {
     private let campaign: String?
-    
+
     public init(campaign: String? = nil) {
         self.campaign = campaign
     }

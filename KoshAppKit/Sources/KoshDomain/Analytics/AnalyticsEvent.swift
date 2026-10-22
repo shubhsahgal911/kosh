@@ -8,7 +8,7 @@
 import Foundation
 
 public enum AnalyticsEvent: Sendable, Equatable {
-    case login(method:String)
+    case login(method: String)
     case expenseAdded(category: String)
 }
 

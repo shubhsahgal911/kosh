@@ -23,4 +23,4 @@ public struct User: Identifiable, Hashable, Sendable {
     }
 
     public var displayName: String { "\(firstName) \(lastName)" }
-} 
+}

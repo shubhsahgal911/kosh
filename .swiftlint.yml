@@ -1,0 +1,73 @@
+
+# .swiftlint.yml — rules for the whole repo
+
+included:
+  - KoshApp
+  - KoshAppTests
+  - KoshAppUITests
+  - KoshAppKit/Sources
+  - KoshAppKit/Tests
+
+excluded:
+  - KoshAppKit/.build
+  - DerivedData
+
+opt_in_rules:
+  - force_unwrapping                # crashes belong only in the composition root, with a reason
+  - implicitly_unwrapped_optional
+  - fatal_error_message
+  - empty_count                     # isEmpty, not count == 0
+  - first_where                     # first(where:), not filter().first
+  - contains_over_filter_count
+  - sorted_first_last
+  - redundant_nil_coalescing
+  - toggle_bool
+  - closure_spacing
+  - vertical_whitespace_closing_braces
+  - private_outlet                  # used by the Storyboard screen in S19
+  - private_action
+
+disabled_rules:
+  - todo                            # TODOs are fine while building step by step
+
+line_length:
+  warning: 140
+  error: 200
+  ignores_comments: true
+  ignores_urls: true
+
+identifier_name:
+  excluded: [id, x, y, i, to, at, on, ok]
+
+nesting:
+  type_level: 2                     # allows a Coordinator nested inside a UIViewRepresentable
+
+# ── Architecture rules: these fail the build ──────────────────────────
+custom_rules:
+  domain_imports_foundation_only:
+    name: "Domain stays pure"
+    included: ".*/Sources/KoshDomain/.*\\.swift"
+    regex: "^\\s*(@preconcurrency\\s+)?import\\s+(?!Foundation\\b)\\w+"
+    message: "KoshDomain may only import Foundation. Depend on a protocol instead."
+    severity: error
+
+  google_maps_only_in_support_target:
+    name: "Google Maps is isolated"
+    excluded: ".*/Sources/GoogleMapsSupport/.*"
+    regex: "^\\s*(@preconcurrency\\s+)?import\\s+GoogleMaps\\b"
+    message: "Only GoogleMapsSupport may import GoogleMaps."
+    severity: error
+
+  firebase_only_in_platform:
+    name: "Firebase is isolated"
+    excluded: ".*/Sources/KoshPlatform/.*"
+    regex: "^\\s*(@preconcurrency\\s+)?import\\s+Firebase\\w*"
+    message: "Only KoshPlatform may import Firebase. Inject AnalyticsService instead."
+    severity: error
+
+  no_print_in_sources:
+    name: "Use Logger, not print"
+    included: ".*/Sources/.*\\.swift"
+    regex: "^\\s*print\\("
+    message: "Use os.Logger in production code; print is for tests and scratch work."
+    severity: warning

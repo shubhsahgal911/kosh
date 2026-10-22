@@ -8,8 +8,11 @@ import Foundation
 import SwiftUI
 
 public struct ExpenseView: View {
-    public init(){}
+    public init() {}
     public var body: some View {
-        ContentUnavailableView("Expenses", image: "list.bullet.rectangle", description: Text("Coming soon")).navigationTitle(Text("Expenses"))
+        ContentUnavailableView("Expenses",
+                               image: "list.bullet.rectangle",
+                               description: Text("Coming soon"))
+        .navigationTitle(Text("Expenses"))
     }
 }

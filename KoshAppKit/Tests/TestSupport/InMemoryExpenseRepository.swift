@@ -19,17 +19,14 @@ public actor InMemoryExpenseRepository: ExpenseRepository {
     public func add(_ expense: Expense) async throws {
         items.append(expense)
     }
-    
+
     public func search(_ text: String, category: ExpenseCategory?) async throws -> [Expense] {
         all.filter {
             (text.isEmpty || $0.merchant.localizedCaseInsensitiveContains(text)) && (category == nil && $0.category == category)
         }
     }
-    
+
     public func expenses(_ interval: DateInterval) async throws -> [Expense] {
         return all.filter { interval.contains($0.date) }
     }
-    
-    
-    
 }

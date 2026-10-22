@@ -10,28 +10,28 @@ import XCTest
 import TestSupport
 
 public final class AddExpenseUseCaseTests: XCTestCase {
-    
-    public func makeSUT() -> (sut: AddExpenseUseCase, repository:InMemoryExpenseRepository,analytics:AnalyticsSpy) {
+
+    public func makeSUT() -> (sut: AddExpenseUseCase, repository: InMemoryExpenseRepository, analytics: AnalyticsSpy) {
         let repository = InMemoryExpenseRepository(items: [])
         let analytics = AnalyticsSpy()
-        return (AddExpenseUseCase(repository: repository, analytics: analytics),repository,analytics)
+        return (AddExpenseUseCase(repository: repository, analytics: analytics), repository, analytics)
     }
-    
+
     public func test_addExpense_rejectNegativeMoney() async {
-        let (sut,repository,analytics) = makeSUT()
-        
+        let (sut, repository, analytics) = makeSUT()
+
         await assertThrows(DomainError.invalidAmount) {
             try await sut.execute(expense: .fixture(amount: Decimal(-1)))
         }
-        
+
         let stored = await repository.all
         XCTAssertTrue(stored.isEmpty)
         XCTAssertTrue(analytics.events.isEmpty, "No event for a failed save")
     }
-    
+
     public func test_addExpense_rejectBlankMerchant() async {
-        let (sut,repository,analytics) = makeSUT()
-        
+        let (sut, repository, analytics) = makeSUT()
+
         await assertThrows(DomainError.emptyMerchant) {
             try await sut.execute(expense: .fixture(merchant: "  "))
         }
@@ -39,7 +39,7 @@ public final class AddExpenseUseCaseTests: XCTestCase {
         XCTAssertTrue(stored.isEmpty)
         XCTAssertTrue(analytics.events.isEmpty, "No event for a failed save")
     }
-    
+
     private func assertThrows(
         _ expected: DomainError,
         file: StaticString = #filePath, line: UInt = #line,
@@ -52,12 +52,9 @@ public final class AddExpenseUseCaseTests: XCTestCase {
             XCTAssertEqual(error as? DomainError, expected, file: file, line: line)
         }
     }
-    
 }
 
-
-//public struct AddExpenseUseCase: Sendable {
-
+// public struct AddExpenseUseCase: Sendable {
 
 //
 //    public func addExpense(expense: Expense) async throws {
@@ -69,5 +66,4 @@ public final class AddExpenseUseCaseTests: XCTestCase {
 //        try await repository.add(expense)
 //        analytics.track(event: .expenseAdded(category: expense.category.rawValue))
 //    }
-//}
-
+// }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89B7E45730898B4F002F776A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 89B7E45630898B4F002F776A /* .swiftlint.yml */; };
 		89EA0F14307724BD00903C8C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 89EA0F13307724AC00903C8C /* README.md */; };
 		89EA0F17307912D400903C8C /* AuthFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F16307912D400903C8C /* AuthFeature */; };
 		89EA0F19307912D400903C8C /* DashboardFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 89EA0F18307912D400903C8C /* DashboardFeature */; };
@@ -45,6 +46,7 @@
 		89AD811C3074BDF50007872A /* KoshAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoshAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AD81263074BDF50007872A /* KoshAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoshAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AD81393074BEF80007872A /* KoshAppKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = KoshAppKit; sourceTree = "<group>"; };
+		89B7E45630898B4F002F776A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		89C03177307EF85F00B75F88 /* KoshApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = KoshApp.xctestplan; sourceTree = "<group>"; };
 		89EA0F13307724AC00903C8C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 		89AD81063074BDEB0007872A = {
 			isa = PBXGroup;
 			children = (
+				89B7E45630898B4F002F776A /* .swiftlint.yml */,
 				89C03177307EF85F00B75F88 /* KoshApp.xctestplan */,
 				89EA0F13307724AC00903C8C /* README.md */,
 				89AD81393074BEF80007872A /* KoshAppKit */,
@@ -156,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89AD81303074BDF50007872A /* Build configuration list for PBXNativeTarget "KoshApp" */;
 			buildPhases = (
+				89B7E45D3089D6AE002F776A /* SwiftLint */,
 				89AD810B3074BDEB0007872A /* Sources */,
 				89AD810C3074BDEB0007872A /* Frameworks */,
 				89AD810D3074BDEB0007872A /* Resources */,
@@ -282,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B7E45730898B4F002F776A /* .swiftlint.yml in Resources */,
 				89EA0F14307724BD00903C8C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +306,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89B7E45D3089D6AE002F776A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n     export PATH=\"/opt/homebrew/bin:$PATH\"\n   fi\n\n   if command -v swiftlint >/dev/null 2>&1; then\n     cd \"$SRCROOT\" && swiftlint lint --quiet\n   else\n     echo \"warning: SwiftLint is not installed. Run: brew install swiftlint\"\n   fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89AD810B3074BDEB0007872A /* Sources */ = {
@@ -472,6 +499,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QJ5J6JWZ6J;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KoshApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Kosh;
@@ -513,6 +541,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QJ5J6JWZ6J;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KoshApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Kosh;

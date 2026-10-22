@@ -14,5 +14,4 @@ public struct StatementView: View {
                                    description: Text("Coming soon"))
                 .navigationTitle("Statements")
         }
-    
 }

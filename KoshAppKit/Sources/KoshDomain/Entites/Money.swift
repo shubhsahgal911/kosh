@@ -7,23 +7,23 @@
 
 import Foundation
 
-public struct Money: Hashable, Sendable, Codable  {
+public struct Money: Hashable, Sendable, Codable {
     public let amount: Decimal
     public let currency: String
-    
+
     public init(amount: Decimal, currency: String) {
         self.amount = amount
         self.currency = currency.uppercased()
     }
-    
+
     public static func inr(_ amount: Decimal) -> Money {
         Money(amount: amount, currency: "INR")
     }
-    
+
     public var isPositive: Bool {
         amount > 0
     }
-    
+
     public func formatted(locale: Locale = .current) -> String {
         amount.formatted(.currency(code: currency).locale(locale))
     }

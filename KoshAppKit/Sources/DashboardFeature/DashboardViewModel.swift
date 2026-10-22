@@ -15,17 +15,17 @@ public final class DashboardViewModel: ObservableObject {
         case loaded([Expense])
         case failed(String)
     }
-    
+
     @Published public private(set) var state: State = .loading
-    
+
     private let searchExpenses: SearchExpensesUseCase
-    
+
     public init(searchExpenses: SearchExpensesUseCase) {
         self.searchExpenses = searchExpenses
     }
-    
+
     public func load() async {
-     
+
         do {
             let all = try await searchExpenses.execute(text: "", expenseCategory: nil)
             state = .loaded(Array(all.prefix(5)))
